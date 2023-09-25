@@ -11,7 +11,7 @@ endforeach()
 
 
 # for each "src/x.c", generate target "x"
-file(GLOB_RECURSE all_srcs CONFIGURE_DEPENDS *.cpp)
+file(GLOB_RECURSE all_srcs CONFIGURE_DEPENDS *.c)
 foreach(v ${all_srcs})
     string(REGEX MATCH "src/.*" relative_path ${v})
     # message(${relative_path})
